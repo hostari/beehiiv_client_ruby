@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |spec|
   spec.name          = "beehiiv_client_ruby"
   spec.version       = "0.1.0"
@@ -13,7 +15,9 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 3.2.0"
 
-  spec.add_development_dependency "webmock", "~> 3.18.1"
   spec.add_development_dependency "rubocop", "~> 1.55", ">= 1.55.1"
   spec.add_development_dependency "rubocop-rspec", "~> 2.23"
+  spec.add_development_dependency "webmock", "~> 3.18.1"
+
+  spec.add_dependency "faraday", "~> 2.7", ">= 2.7.10"
 end
