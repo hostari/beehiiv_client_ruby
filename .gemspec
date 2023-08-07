@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "A beehiiv gem derived from xaablaza's beehiiv_client shard"
   spec.description   = "A Beehiiv API wrapper for the Ruby language derived from xaablaza's beehiiv_client shard"
   spec.email         = "manuel@hostari.com"
-  spec.homepage      = "git@github.com:hostari/beehiiv_client_ruby"
+  spec.homepage      = "https://github.com/hostari/beehiiv_client_ruby"
   spec.license       = "MIT"
   spec.platform      = Gem::Platform::RUBY
   spec.files         = Dir["lib/**/*"]
