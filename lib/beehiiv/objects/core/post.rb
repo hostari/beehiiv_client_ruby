@@ -7,7 +7,7 @@ class Beehiiv
     def self.retrieve(client, publication_id, id)
       response = client.get("/v2/publications/#{publication_id}/posts/#{id}?expand=stats")
 
-      raise Beehiiv::Error, response.body unless response.status == 200
+      return Beehiiv::Error.new(response.body) unless response.status == 200
 
       Beehiiv::Post.new(JSON.parse(response.body))
     end
@@ -15,7 +15,7 @@ class Beehiiv
     def self.list(client, publication_id)
       response = client.get("/v2/publications/#{publication_id}/posts")
 
-      raise Beehiiv::Error, response.body unless response.status == 200
+      return Beehiiv::Error.new(response.body) unless response.status == 200
 
       Beehiiv::List.new(JSON.parse(response.body))
     end

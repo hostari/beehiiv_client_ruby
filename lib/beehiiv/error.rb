@@ -8,7 +8,6 @@ class Beehiiv
       @status = response["status"]
       @status_text = response["statusText"]
       @errors = response["errors"]
-      super(response)
     end
   end
 end
