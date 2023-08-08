@@ -7,7 +7,7 @@ class Beehiiv
     def self.list(client, id)
       response = client.get("/v2/publications/#{id}/referral_program")
 
-      return Beehiiv::Error.new(response.body) unless response.status == 200
+      return Beehiiv::Error.new(JSON.parse(response.body)) unless response.status == 200
 
       Beehiiv::List.new(JSON.parse(response.body))
     end
