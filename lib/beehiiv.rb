@@ -15,4 +15,4 @@ class Beehiiv
   end
 end
 
-require_all "lib"
+require_rel "./beehiiv"
