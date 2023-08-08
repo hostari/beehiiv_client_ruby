@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "beehiiv_client_ruby"
-  spec.version       = "0.1.2"
+  spec.version       = "0.1.3"
   spec.authors       = ["Manuel Tinio"]
   spec.summary       = "A beehiiv gem derived from xaablaza's beehiiv_client shard"
   spec.description   = "A Beehiiv API wrapper for the Ruby language derived from xaablaza's beehiiv_client shard"
