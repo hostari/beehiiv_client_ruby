@@ -13,11 +13,19 @@ class Beehiiv
     end
 
     def self.retrieve(client, publication_id, id)
-      response = client.get("/v2/publications/#{publication_id}/segments/#{id}/results")
+      response = client.get("/v2/publications/#{publication_id}/segments/#{id}")
 
       return Beehiiv::Error.new(JSON.parse(response.body)) unless response.status == 200
 
       Beehiiv::Segment.new(JSON.parse(response.body))
+    end
+
+    def self.expanded_results(client, publication_id, id)
+      response = client.get("/v2/publications/#{publication_id}/segments/#{id}/results")
+
+      return Beehiiv::Error.new(JSON.parse(response.body)) unless response.status == 200
+
+      Beehiiv::List.new(JSON.parse(response.body))
     end
 
     attr_reader :id, :name, :segment_type, :last_calculated, :total_results, :status, :active
