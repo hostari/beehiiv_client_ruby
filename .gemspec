@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock", "~> 3.18.1"
 
   spec.add_dependency "faraday", "~> 2.7", ">= 2.7.10"
+  spec.add_dependency "require_all", "~> 3.0"
 end
